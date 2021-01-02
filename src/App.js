@@ -27,7 +27,15 @@ function App() {
       <div
         ref={(ref) => {
           ref.appendChild(view.dom);
-          setTimeout(() => view.focus(), 100);
+          setTimeout(() => {
+            view.dom.focus();
+            document.querySelector(
+              "#content"
+            ).textContent = `Focused: ${view.hasFocus()}`;
+          }, 100);
+          document.querySelector(
+            "#content"
+          ).textContent = `Focused: ${view.hasFocus()}`;
         }}
       />
     </div>
