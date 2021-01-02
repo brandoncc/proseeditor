@@ -19,6 +19,8 @@ const view = new EditorView(document.createElement("div"), {
   }),
 });
 
+window.view = view;
+
 function App() {
   return (
     <div className="App">
