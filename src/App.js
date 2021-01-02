@@ -27,7 +27,7 @@ function App() {
       <div
         ref={(ref) => {
           ref.appendChild(view.dom);
-          setTimeout(() => view.dom.focus(), 100);
+          setTimeout(() => view.focus(), 100);
         }}
       />
     </div>
